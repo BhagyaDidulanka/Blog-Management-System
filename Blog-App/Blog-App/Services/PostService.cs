@@ -2,13 +2,14 @@
 using Blog_App.Dto.Request;
 using Blog_App.Dto.Response;
 using Blog_App.Repositories.Interface;
+using Blog_App.Services.Interface;
 using BlogApp.Models;
-
 
 namespace Blog_App.Services
 {
     public class PostService : IPostServices
     {
+        //DI
         private readonly IPostRepository _postRepository;
         private readonly IMapper _mapper;
 
@@ -17,10 +18,6 @@ namespace Blog_App.Services
             _postRepository = postRepository;
             _mapper = mapper;
         }
-
-
-
-
         public async Task<PostResponseDto> CreatePost(PostRequestDto postRequestDto)
         {
             Post post = _mapper.Map<Post>(postRequestDto);
@@ -65,7 +62,6 @@ namespace Blog_App.Services
                 return true;
             }
         }
-
 
     }
 }

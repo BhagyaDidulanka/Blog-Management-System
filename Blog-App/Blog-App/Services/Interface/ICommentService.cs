@@ -11,5 +11,10 @@ namespace Blog_App.Services.Interface
         Task<PostResponseDto> GetPostById(int id);
         Task<PostResponseDto> UpdatePost(int id, PostRequestDto postRequestDto);
         Task<bool> DeletePost(int id);
+        Task<CommentResponseDto> CreateComment(CommentRequestDto commentRequestDto);
+        Task<List<CommentResponseDto>> GetAllComments();
+        Task<CommentResponseDto> GetCommentById(int id);
+        Task<CommentResponseDto> UpdateComment(int id, CommentRequestDto commentRequestDto, int postId);
+        Task<bool> DeleteComment(int id);
     }
 }
