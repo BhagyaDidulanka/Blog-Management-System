@@ -48,5 +48,10 @@ namespace Blog_App.Repositories
             _context.Posts.Remove(deletedPost);
             await _context.SaveChangesAsync();
         }
+
+        public Task<List<Post>> GetAllPosts()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

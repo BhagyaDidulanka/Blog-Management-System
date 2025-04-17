@@ -10,5 +10,6 @@ namespace Blog_App.Repositories.Interface
         Task<Post> GetPostById(int id);
         Task<Post> Update(Post post);
         Task DeletePost(Post deletedPost);
+        Task<List<Post>> GetAllPosts();
     }
 }
