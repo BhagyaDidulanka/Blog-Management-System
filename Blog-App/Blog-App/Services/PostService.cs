@@ -7,7 +7,7 @@ using BlogApp.Models;
 
 namespace Blog_App.Services
 {
-    public class PostService
+    public class PostService : IPostServices
     {
         private readonly IPostRepository _postRepository;
         private readonly IMapper _mapper;

@@ -1,11 +1,12 @@
 ﻿using Blog_App.Data;
 using Blog_App.Dto.Request;
+using Blog_App.Repositories.Interface;
 using BlogApp.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Blog_App.Repositories
 {
-    public class CommentRepository
+    public class CommentRepository : ICommentRepository
     {
         private readonly ApplicationDbContext _context;
         public CommentRepository(ApplicationDbContext context)
