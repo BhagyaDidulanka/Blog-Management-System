@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+using AutoMapper;
 using Blog_App.Data;
 using Blog_App.Dto.Response;
 using Blog_App.Repositories.Interface;
@@ -27,7 +27,7 @@ namespace Blog_App.Repositories
 
         }
 
-        public async Task<List<Post>> GetAllpost()
+        public async Task<List<Post>> GetAllposts()
         {
             List<Post> posts = await _context.Posts.Include(p => p.Comments).ToListAsync();
             return posts;
@@ -49,9 +49,9 @@ namespace Blog_App.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public Task<List<Post>> GetAllPosts()
-        {
-            throw new NotImplementedException();
-        }
+        //public Task<List<Post>> GetAllPosts()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
