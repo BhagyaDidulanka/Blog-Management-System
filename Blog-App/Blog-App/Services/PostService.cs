@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+using AutoMapper;
 using Blog_App.Dto.Request;
 using Blog_App.Dto.Response;
 using Blog_App.Repositories.Interface;
@@ -27,7 +27,7 @@ namespace Blog_App.Services
 
         public async Task<List<PostResponseDto>> GetAllPosts()
         {
-            List<Post> posts = await _postRepository.GetAllPosts();
+            List<Post> posts = await _postRepository.GetAllposts();
             List<PostResponseDto> postResponseDtos = _mapper.Map<List<PostResponseDto>>(posts);
             return postResponseDtos;
         }
